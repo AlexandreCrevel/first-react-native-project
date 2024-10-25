@@ -4,7 +4,7 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name='index'
+        name='(quiz)/index'
         options={{ headerShown: true, headerTitle: 'Home' }}
       />
     </Stack>

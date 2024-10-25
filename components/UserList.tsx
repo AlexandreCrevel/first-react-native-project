@@ -1,8 +1,9 @@
-import Card from '@/components/Card';
 import users from '@/data/users.json';
+import React from 'react';
 import { FlatList, View } from 'react-native';
+import Card from './Card';
 
-export default function Index() {
+const UserList = () => {
   return (
     <View>
       <FlatList
@@ -17,4 +18,6 @@ export default function Index() {
       />
     </View>
   );
-}
+};
+
+export default UserList;
