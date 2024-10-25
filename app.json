@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "first-app",
-    "slug": "first-app",
+    "slug": "first-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "db51f281-e19d-41ef-b2ae-b95b3d5b8f48"
+      }
+    },
+    "owner": "alx.c"
   }
 }
