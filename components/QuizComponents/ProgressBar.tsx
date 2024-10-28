@@ -4,12 +4,13 @@ import * as Progress from 'react-native-progress';
 import { ThemedText } from '../ThemedText';
 
 type ProgressBarProps = {
+  style?: Object;
   step: number;
   numberOfQuestions: number;
 };
-const ProgressBar = ({ step, numberOfQuestions }: ProgressBarProps) => {
+const ProgressBar = ({ style, step, numberOfQuestions }: ProgressBarProps) => {
   return (
-    <View style={{ width: '100%', padding: 15 }}>
+    <View style={style}>
       <Progress.Bar progress={step / numberOfQuestions} width={null} />
       <ThemedText>
         {step} / {numberOfQuestions}
