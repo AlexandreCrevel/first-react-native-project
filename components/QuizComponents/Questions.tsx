@@ -13,7 +13,12 @@ const Questions = ({ question, addAnswer }: QuestionProps) => {
   return (
     <View style={{ width: '100%' }}>
       <ThemedText
-        style={{ textAlign: 'center', marginBottom: 20, fontSize: 25 }}
+        style={{
+          textAlign: 'center',
+          marginBottom: 15,
+          fontSize: 23,
+          height: 85,
+        }}
         type='subtitle'
       >
         {question.question}

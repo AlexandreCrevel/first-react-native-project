@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { ThemedText } from '../ThemedText';
 
 const Answer = ({
@@ -10,9 +10,9 @@ const Answer = ({
   onPress: () => void;
 }) => {
   return (
-    <View style={style.container}>
-      <ThemedText onPress={onPress}>{answer}</ThemedText>
-    </View>
+    <ThemedText style={style.container} onPress={onPress}>
+      {answer}
+    </ThemedText>
   );
 };
 
@@ -20,10 +20,14 @@ export default Answer;
 
 const style = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 15,
+    marginVertical: 5,
     display: 'flex',
-    gap: 15,
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderColor: 'rgba(0, 0, 0, 0.2)',
+    borderWidth: 1,
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 
 interface Question {
   correct_answer: string;
@@ -13,6 +13,7 @@ interface RecapProps {
   failure_message: string;
   questions: Question[];
   answers: (string | null)[];
+  resetGame: () => void;
 }
 const Recap = ({
   minimum_score,
@@ -20,6 +21,7 @@ const Recap = ({
   failure_message,
   questions,
   answers,
+  resetGame,
 }: RecapProps) => {
   const score = () => {
     if (!questions || !answers) return 0;
@@ -37,8 +39,9 @@ const Recap = ({
 
   return (
     <View>
-      <Text>Your score: {score() / questions.length}</Text>
+      <Text>Your score: {`${score()} / ${questions.length}`}</Text>
       <Text>{has_won() ? success_message : failure_message}</Text>
+      <Button title='Reset Game' onPress={resetGame} />
     </View>
   );
 };
